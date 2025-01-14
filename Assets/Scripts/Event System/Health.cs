@@ -39,14 +39,12 @@ public class Health : MonoBehaviour
 	#endregion
 
 	#region Unity Callbacks
-	// Start is called before the first frame update
 	void Start()
     {
 		CurrentHealth = _maxHealth;
 		
 	}
 
-	//Update is called once per frame
 
 	//void Update()
 	//{

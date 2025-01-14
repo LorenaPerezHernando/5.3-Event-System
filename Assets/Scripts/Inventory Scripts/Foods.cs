@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 
 namespace Inventorys
@@ -22,13 +23,14 @@ namespace Inventorys
 
         public float Sell()
         {
-            Debug.Log("Has ganado" + Price + "dineros!");
+            Debug.Log("Has ganado " + Price + " dineros!");
             return Price;
         }
+       
 
         public void Use()
         {
-            Debug.Log("Te comes" + Name + "y ganas" + HealingPoints + "vidas!!");
+            Debug.Log("Te comes " + Name + " y ganas " + HealingPoints + " vidas!!");
         }
 
         #endregion

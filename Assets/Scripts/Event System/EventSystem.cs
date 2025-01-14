@@ -8,19 +8,18 @@ public class EventSystem : MonoBehaviour
 
 	#region Fields
 	[SerializeField] private Points _points;
-	[SerializeField] private Health _payerHealth;
+	[SerializeField] private Health _playerHealth;
 	[SerializeField] private UIController _ui;
 	[SerializeField] private SoundController _sound;
 	#endregion
 
 	#region Unity Callbacks
-	// Start is called before the first frame update
 	void Start()
     {
 		//Event Listener
-		_payerHealth.OnGetDamage += OnGetDamage;
-		_payerHealth.OnGetHeal += OnGetHeal;
-		_payerHealth.OnDie += OnDie;
+		_playerHealth.OnGetDamage += OnGetDamage;
+		_playerHealth.OnGetHeal += OnGetHeal;
+		_playerHealth.OnDie += OnDie;
 		_points.OnGetPoints += OnAddPoints;
 	}
 
@@ -30,16 +29,17 @@ public class EventSystem : MonoBehaviour
 	private void OnGetDamage()
 	{
 		_sound.PlayDamageSound();
-		_ui.UpdateSliderLife(_payerHealth.CurrentHealth);
+		_ui.UpdateSliderLife(_playerHealth.CurrentHealth);
 	}
 	private void OnGetHeal()
 	{
-		_ui.UpdateSliderLife(_payerHealth.CurrentHealth);
+		_ui.UpdateSliderLife(_playerHealth.CurrentHealth);
 	}
 	private void OnDie()
 	{
 		_sound.PlayDieSound();
-		Destroy(_payerHealth.gameObject);
+		Debug.Log("Player Died");
+		Destroy(_playerHealth.gameObject);
 	}
 	private void OnAddPoints()
 	{

@@ -10,7 +10,6 @@ public class Points : MonoBehaviour
 	#endregion
 
 	#region Unity Callbacks
-	// Start is called before the first frame update
 	void Start()
     {
 		CurrentPoints = 0;

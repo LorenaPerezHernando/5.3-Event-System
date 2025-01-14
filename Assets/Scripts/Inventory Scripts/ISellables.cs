@@ -1,4 +1,4 @@
-namespace Inventorys
+namespace Inventorys    
 {
 
     public interface ISellables

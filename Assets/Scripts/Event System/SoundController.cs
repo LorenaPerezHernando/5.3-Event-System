@@ -3,8 +3,6 @@ using System;
 
 public class SoundController : MonoBehaviour
 {
-	#region Properties
-	#endregion
 
 	#region Fields
 	[SerializeField] private AudioClip _damageSound;
