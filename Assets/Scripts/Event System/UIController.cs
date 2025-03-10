@@ -2,17 +2,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class UIController : MonoBehaviour
 {
 
 	#region Fields
 	[SerializeField] private Slider _slider;
 	[SerializeField] private TextMeshProUGUI _pointsText;
-	#endregion
+    #endregion
 
 
-	#region Public Methods
-	public void UpdateSliderLife(float currentLife)
+    #region Public Methods
+    public void UpdateSliderLife(float currentLife)
 	{
 		_slider.value = currentLife;
 	}

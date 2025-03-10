@@ -45,5 +45,6 @@ public class EventSystem : MonoBehaviour
 	{
 		_ui.UpdatePoints(_points.CurrentPoints);
 	}
+
 	#endregion
 }

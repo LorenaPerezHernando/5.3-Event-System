@@ -5,7 +5,7 @@ namespace Inventorys
     {
 
         #region Properties
-        [field: SerializeField] public float Price { get; set; }
+        float Price { get; set; } 
         #endregion
 
 

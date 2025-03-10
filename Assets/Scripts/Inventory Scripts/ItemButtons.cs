@@ -21,7 +21,15 @@ namespace Inventorys
             set
             {
                 _currentItem = value;
-                _buttonText.text =_currentItem.Name;   
+                if (_currentItem != null &&_currentItem.Name != null)
+                {
+                    _buttonText.text = _currentItem.Name;
+                }
+                else
+                {
+                    Debug.LogError("Se intentó asignar un CurrentItem null en un botón.");
+                }
+                
             }
         }
 
@@ -30,9 +38,9 @@ namespace Inventorys
         #endregion
 
         #region Fields
-        private TextMeshProUGUI _buttonText;
-        private Button _button;
-        private Items _currentItem;
+        [SerializeField] private TextMeshProUGUI _buttonText;
+        [SerializeField] private Button _button;
+        [SerializeField] private Items _currentItem;
         #endregion
 
         #region Unity Callbacks
@@ -47,10 +55,6 @@ namespace Inventorys
         #endregion
 
      
-
-        #region Private Methods
-
-        #endregion
     }
 
 }
