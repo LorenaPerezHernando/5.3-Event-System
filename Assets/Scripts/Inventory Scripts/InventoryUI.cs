@@ -25,8 +25,8 @@ namespace Inventorys
         public void SetCurrentItem(ItemButtons item)
         {
             _currentItemSelected = item;
-            _sellButton.gameObject.SetActive(item.CurrentItem is ISellables);
-            _useButton.gameObject.SetActive(item.CurrentItem is IUsables);
+            _sellButton.gameObject.SetActive(_currentItemSelected.CurrentItem is ISellables);
+            _useButton.gameObject.SetActive(_currentItemSelected.CurrentItem is IUsables);
         }
 
         private void SellCurrentItem()

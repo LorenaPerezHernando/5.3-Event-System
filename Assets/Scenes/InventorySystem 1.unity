@@ -916,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfea341c2a220d34fac82ca0fb850f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _items: []
   _weapons:
   - <Name>k__BackingField: Axe
     <Damage>k__BackingField: 13
@@ -960,7 +961,7 @@ GameObject:
   - component: {fileID: 1650945511}
   - component: {fileID: 1650945513}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: Inventory Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1062,7 +1063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sellButton: {fileID: 496317762}
   _useButton: {fileID: 217530448}
-  _inventoryPanel: {fileID: 1205219424}
+  _inventoryPanel: {fileID: 1650945510}
   _prefabButton: {fileID: 5471408718342362016, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
 --- !u!1 &1784363704
 GameObject:
@@ -1500,6 +1501,10 @@ PrefabInstance:
       propertyPath: _buttonText
       value: 
       objectReference: {fileID: 971579973}
+    - target: {fileID: 5471408718342362016, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+      propertyPath: _currentItem.<Name>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

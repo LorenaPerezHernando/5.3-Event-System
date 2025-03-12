@@ -6,7 +6,7 @@ namespace Inventorys
 {
 
     [Serializable]
-    public class Weapons : Items, IUsables
+    public class Weapons : Items, IUsables, IConsumables
     {
 
         #region Properties

@@ -475,6 +475,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496317760}
   m_CullTransparentMesh: 1
+--- !u!114 &501888858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1847544885255987242, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+  m_PrefabInstance: {fileID: 732818693091563671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556027538
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +514,7 @@ RectTransform:
   m_GameObject: {fileID: 556027538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.92043006, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 307380695}
@@ -512,7 +523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 121}
   m_SizeDelta: {x: 0, y: -240.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556027540
@@ -905,10 +916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfea341c2a220d34fac82ca0fb850f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabButton: {fileID: 307380699}
-  _inventoryPanel: {fileID: 1650945510}
-  _sellButton: {fileID: 496317762}
-  _useButton: {fileID: 217530448}
   _items: []
   _weapons:
   - <Name>k__BackingField: Axe
@@ -925,7 +932,6 @@ MonoBehaviour:
   _others:
   - <Name>k__BackingField: Jewels
     <Price>k__BackingField: 50
-  _currentItemSelected: {fileID: 0}
 --- !u!4 &1205219424
 Transform:
   m_ObjectHideFlags: 0
@@ -941,6 +947,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521333975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8600414372666982019, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+  m_PrefabInstance: {fileID: 732818693091563671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650945509
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650945510}
+  - component: {fileID: 1650945514}
   - component: {fileID: 1650945512}
   - component: {fileID: 1650945511}
   - component: {fileID: 1650945513}
@@ -977,7 +995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -180.838, y: 0}
+  m_AnchoredPosition: {x: -180.875, y: -100}
   m_SizeDelta: {x: -361.676, y: -208.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1650945511
@@ -1042,6 +1060,34 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1650945514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650945509}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfea341c2a220d34fac82ca0fb850f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _items: []
+  _weapons:
+  - <Name>k__BackingField: Axe
+    <Damage>k__BackingField: 13
+  - <Name>k__BackingField: Sword
+    <Damage>k__BackingField: 5
+  _foods:
+  - <Name>k__BackingField: Apple
+    <HealingPoints>k__BackingField: 5
+    <Price>k__BackingField: 3
+  - <Name>k__BackingField: Cake
+    <HealingPoints>k__BackingField: 10
+    <Price>k__BackingField: 7
+  _others:
+  - <Name>k__BackingField: Jewels
+    <Price>k__BackingField: 50
 --- !u!1 &1784363704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784363708}
+  - component: {fileID: 1784363709}
   - component: {fileID: 1784363707}
   - component: {fileID: 1784363706}
   - component: {fileID: 1784363705}
@@ -1136,9 +1183,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 556027539}
   - {fileID: 1650945510}
   - {fileID: 1888788400}
+  - {fileID: 556027539}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1147,6 +1194,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1784363709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784363704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210fc5564d3e7774b84090f834de64c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sellButton: {fileID: 496317762}
+  _useButton: {fileID: 217530448}
+  _inventoryPanel: {fileID: 1650945510}
+  _prefabButton: {fileID: 307380699}
 --- !u!1 &1860127911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 219.16, y: 0}
+  m_AnchoredPosition: {x: 219.125, y: -100}
   m_SizeDelta: {x: -438.32, y: -208.078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888788402
@@ -1466,6 +1529,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Add Item Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4334721611621214589, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471408718342362016, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+      propertyPath: _button
+      value: 
+      objectReference: {fileID: 1521333975}
+    - target: {fileID: 5471408718342362016, guid: 5ead1108486208344a30bcd635f359ac, type: 3}
+      propertyPath: _buttonText
+      value: 
+      objectReference: {fileID: 501888858}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

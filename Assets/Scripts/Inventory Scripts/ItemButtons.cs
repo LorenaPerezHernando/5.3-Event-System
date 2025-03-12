@@ -1,4 +1,3 @@
-using Inventorys;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +11,7 @@ namespace Inventorys
     {
 
         #region Properties
+        public event Action OnClick;
         public Items CurrentItem
         {
             get
@@ -21,19 +21,13 @@ namespace Inventorys
             set
             {
                 _currentItem = value;
-                if (_currentItem != null &&_currentItem.Name != null)
-                {
+                          
                     _buttonText.text = _currentItem.Name;
-                }
-                else
-                {
-                    Debug.LogError("Se intentó asignar un CurrentItem null en un botón.");
-                }
+                
                 
             }
         }
 
-        public event Action OnClick;
 
         #endregion
 
@@ -49,7 +43,7 @@ namespace Inventorys
         {
             _button = GetComponent<Button>();
             _buttonText = GetComponentInChildren<TextMeshProUGUI>();
-            _button.onClick.AddListener(() => OnClick?.Invoke());    //Delegate Example
+            _button.onClick.AddListener(() => OnClick?.Invoke());    //Delegate Example(Ejecutar metodo)
         }
 
         #endregion
