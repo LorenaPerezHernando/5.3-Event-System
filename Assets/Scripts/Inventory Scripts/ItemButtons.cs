@@ -43,7 +43,7 @@ namespace Inventorys
         {
             _button = GetComponent<Button>();
             _buttonText = GetComponentInChildren<TextMeshProUGUI>();
-            _button.onClick.AddListener(() => OnClick?.Invoke());    //Delegate Example(Ejecutar metodo)
+            _button.onClick.AddListener(() => OnClick?.Invoke());    
         }
 
         #endregion
